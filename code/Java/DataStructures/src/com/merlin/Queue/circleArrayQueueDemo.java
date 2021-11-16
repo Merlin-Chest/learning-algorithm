@@ -1,9 +1,8 @@
 package com.merlin.Queue;
 
-public class CircleArrayQueueDemo {
+public class circleArrayQueueDemo {
     public static void main(String[] args) {
         CircleArrayQueue circleArrayQueue = new CircleArrayQueue(3);
-
     }
 }
 
