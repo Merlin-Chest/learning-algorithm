@@ -4,22 +4,31 @@ import java.util.Stack;
 
 public class SingleLinkedListDemo {
     public static void main(String[] args) {
+
         SingleLinkedList singleLinkedList1 = new SingleLinkedList();
-        SingleLinkedList singleLinkedList2 = new SingleLinkedList();
         singleLinkedList1.add(new Node(1));
         singleLinkedList1.add(new Node(3));
         singleLinkedList1.add(new Node(5));
         singleLinkedList1.add(new Node(7));
-        singleLinkedList2.add(new Node(3));
-        singleLinkedList2.add(new Node(4));
-        singleLinkedList2.add(new Node(6));
-        singleLinkedList2.add(new Node(8));
 
-        Node merge = mergeList(singleLinkedList1.getHead(), singleLinkedList2.getHead());
-
-        SingleLinkedList singleLinkedList3 = new SingleLinkedList();
-        singleLinkedList3.setHead(merge);
-        singleLinkedList3.showList();
+        singleLinkedList1.addByOrder(new Node(4));
+        singleLinkedList1.showList();
+//        SingleLinkedList singleLinkedList1 = new SingleLinkedList();
+//        SingleLinkedList singleLinkedList2 = new SingleLinkedList();
+//        singleLinkedList1.add(new Node(1));
+//        singleLinkedList1.add(new Node(3));
+//        singleLinkedList1.add(new Node(5));
+//        singleLinkedList1.add(new Node(7));
+//        singleLinkedList2.add(new Node(3));
+//        singleLinkedList2.add(new Node(4));
+//        singleLinkedList2.add(new Node(6));
+//        singleLinkedList2.add(new Node(8));
+//
+//        Node merge = mergeList(singleLinkedList1.getHead(), singleLinkedList2.getHead());
+//
+//        SingleLinkedList singleLinkedList3 = new SingleLinkedList();
+//        singleLinkedList3.setHead(merge);
+//        singleLinkedList3.showList();
     }
 
     //获取到单链表的结点个数（如果是带头结点的链表，不统计头结点）
@@ -176,7 +185,7 @@ class SingleLinkedList {
             if (temp.next == null) {
                 break;
             }
-            if (node.value >= temp.next.value) {
+            if (node.value <= temp.next.value) {
                 break;
             }
             temp = temp.next;
