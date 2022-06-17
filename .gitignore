@@ -1,4 +1,12 @@
-._*
-.idea
 node_modules
-docs/.vitepress/dist
+.temp
+.cache
+._*
+.obsidian
+.vscode
+.idea
+dist
+/**/code
+/**/resource
+pnpm-global
+.DS_Store
