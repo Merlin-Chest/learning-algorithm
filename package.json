@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "vitepress": "1.0.0-alpha.2",
-    "vitepress-auto-nav-sidebar": "^0.0.3",
+    "vitepress-auto-nav-sidebar": "^0.0.4",
     "vue": "^3.2.37"
   }
 }

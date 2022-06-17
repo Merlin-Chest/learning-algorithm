@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import AutoNavPlugin from '../../../vitepress-auto-nav-sidebar/lib/index'
+import AutoNavPlugin from 'vitepress-auto-nav-sidebar'
 
 const { nav, sidebar } = AutoNavPlugin({
   ignoreFolders: [
