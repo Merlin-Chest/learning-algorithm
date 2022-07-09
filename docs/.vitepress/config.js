@@ -22,7 +22,7 @@ export default defineConfig({
   title: 'Code More Create',
   // description: 'Vite & Vue powered static site generator.',
   themeConfig: {
-    logo: 'logo.png',
+    logo: '/logo.png',
     siteTitle: 'Code More Create',
     nav, sidebar,
     footer: {
