@@ -7,10 +7,10 @@ services:
       dockerfile: Dockerfile
     labels:
       # 设置Host 为 localhost 进行域名访问
-      - traefik.http.routers.blog.rule=Host(`algorithm.merlin218.top`)
+      - traefik.http.routers.algorithm.rule=Host(`algorithm.merlin218.top`)
       # 开启HTTPS
-      - traefik.http.routers.blog.tls=true
-      - traefik.http.routers.blog.tls.certresolver=le
+      - traefik.http.routers.algorithm.tls=true
+      - traefik.http.routers.algorithm.tls.certresolver=le
 
 networks:
   default:
