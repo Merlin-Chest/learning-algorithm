@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import CodeRunPlugin from './theme/plugins/run-code'
 import AutoNavPlugin from 'vitepress-auto-nav-sidebar'
 
 const { nav, sidebar } = AutoNavPlugin({
@@ -12,8 +13,8 @@ const { nav, sidebar } = AutoNavPlugin({
     'utils',
     'resource'
   ],
-  ignoreFiles:['index'],
-  singleLayerNav:true
+  ignoreFiles: ['index'],
+  singleLayerNav: true
 })
 
 
@@ -21,6 +22,11 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Code More Create',
   // description: 'Vite & Vue powered static site generator.',
+  markdown: {
+    config: (md) => {
+      md.use(CodeRunPlugin);
+    }
+  },
   themeConfig: {
     logo: '/logo.png',
     siteTitle: 'Code More Create',

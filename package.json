@@ -15,5 +15,12 @@
     "vitepress": "1.0.0-alpha.2",
     "vitepress-auto-nav-sidebar": "^0.0.4",
     "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "@codemirror/lang-html": "^6.1.0",
+    "@codemirror/lang-javascript": "^6.0.2",
+    "@codemirror/theme-one-dark": "^6.0.0",
+    "codemirror": "^6.0.1",
+    "vue-codemirror": "^6.0.2"
   }
 }
