@@ -154,6 +154,38 @@ class LRUCache{
 }
 ```
 
+## 使用JavaScript中Map实现
+
+Map的key会按照插入的顺序排序
+
+```js
+var LRUCache = function(capacity) {
+    this.map = new Map();
+    this.capacity = capacity;
+};
+
+LRUCache.prototype.get = function(key) {
+    if(this.map.has(key)){
+        const val = this.map.get(key);
+        this.map.delete(key);
+        this.map.set(key,val);
+        return val;
+    }
+    return -1;
+};
+
+LRUCache.prototype.put = function(key, value) {
+    if(this.map.has(key)){
+        this.map.delete(key);
+    }
+    // 必须在set之前判断
+    if(this.map.size >= this.capacity){
+        this.map.delete(this.map.keys().next().value);
+    }
+    this.map.set(key,value);
+};
+```
+
 ## 使用Java内置`LinkedHashMap`
 
 ```java
